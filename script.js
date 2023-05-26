@@ -40,6 +40,7 @@ function showSuggestions(results) {
 
 function useSuggestion(e) {
 	input.value = e.target.innerText
+	suggestions.innerText = ''
 }
 
 input.addEventListener('keyup', searchHandler);
