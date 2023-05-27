@@ -16,11 +16,15 @@ function search(str) {
 }
 
 function searchHandler(e) {
-	if (e.key === 'Backspace') {
-		let backspace = typed.slice(0, -1);
-		typed = backspace
-	} else if (e) {
-		typed += e.key
+	// if (e.key === 'Backspace') {
+	// 	let backspace = typed.slice(0, -1);
+	// 	typed = backspace
+	// } else if (e) {
+	// 	typed += e.key
+	// }
+	// included.clear()
+	if (e){
+		typed = input.value
 	}
 	included.clear()
 	suggestions.innerText = ''
@@ -32,7 +36,7 @@ function showSuggestions(results) {
 		included.clear()
 	}
 	for (let str of results){
-		const item = document.createElement('ul');
+		const item = document.createElement('li');
 		item.innerText = str
 		suggestions.appendChild(item)
 	}
