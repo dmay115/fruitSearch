@@ -16,13 +16,6 @@ function search(str) {
 }
 
 function searchHandler(e) {
-	// if (e.key === 'Backspace') {
-	// 	let backspace = typed.slice(0, -1);
-	// 	typed = backspace
-	// } else if (e) {
-	// 	typed += e.key
-	// }
-	// included.clear()
 	if (e){
 		typed = input.value
 	}
